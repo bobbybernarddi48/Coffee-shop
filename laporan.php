@@ -1,5 +1,22 @@
 <?php
-$data = json_decode(file_get_contents('checkout.json'), true);
+$dataFile = 'data/checkout.json';
+
+// Kalau file belum ada, buat folder & file kosong
+if (!file_exists('data')) {
+    mkdir('data', 0777, true);
+}
+
+if (!file_exists($dataFile)) {
+    file_put_contents($dataFile, json_encode([]));
+}
+
+// Ambil isi file
+$data = json_decode(file_get_contents($dataFile), true);
+
+// Kalau kosong, jadikan array kosong biar tidak error
+if (!$data) {
+    $data = [];
+}
 
 $totalPendapatan = 0;
 $totalItem = 0;
@@ -10,6 +27,7 @@ foreach ($data as $pesanan) {
     $totalItem += $pesanan['qty'];
 }
 ?>
+
 
 <!DOCTYPE html>
 <html>
