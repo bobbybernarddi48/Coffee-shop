@@ -7,12 +7,29 @@ h2{color: #4b2e2e; font-weight: bold;}
 .btn-warning { background:#c19a6b; border:none; }
 .btn-danger { background:#a94442; border:none; }
 .table-dark { background:#4b2e2e; }
+
 .card-img-top {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: contain; /* tidak akan terpotong */
     background: #f3e5d8; /* warna coklat muda biar estetik */
 }
+table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #6f4e37;
+    color: white;
+}
+
+td, th {
+    text-align: center;
+}
+
 
 
 

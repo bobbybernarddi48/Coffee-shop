@@ -11,6 +11,8 @@
 <h2>☕ Daftar Kopi</h2>
 <a href="tambah.php" class="btn btn-primary mb-3">+ Tambah Kopi</a>
 <a href="pesanan.php" class="btn btn-dark mb-3">📦 Lihat Pesanan</a>
+<a href="terlaris.php" class="btn btn-warning">🔥 Kopi Terlaris</a>
+
 
 <div class="row">
 <?php foreach ($kopi as $k): ?>
