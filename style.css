@@ -8,6 +8,11 @@ h2{color: #4b2e2e; font-weight: bold;}
 .btn-danger { background:#a94442; border:none; }
 .table-dark { background:#4b2e2e; }
 .card-img-top {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: contain; /* tidak akan terpotong */
+    background: #f3e5d8; /* warna coklat muda biar estetik */
 }
+
+
+
