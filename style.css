@@ -7,3 +7,7 @@ h2{color: #4b2e2e; font-weight: bold;}
 .btn-warning { background:#c19a6b; border:none; }
 .btn-danger { background:#a94442; border:none; }
 .table-dark { background:#4b2e2e; }
+.card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
