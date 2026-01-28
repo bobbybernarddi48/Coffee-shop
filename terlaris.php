@@ -1,10 +1,24 @@
 <?php
-$data = json_decode(file_get_contents('checkout.json'), true);
+$dataFile = 'data/checkout.json';
+
+// Kalau file belum ada, buat file kosong
+if (!file_exists($dataFile)) {
+    file_put_contents($dataFile, json_encode([]));
+}
+
+// Ambil data pesanan
+$data = json_decode(file_get_contents($dataFile), true);
+
+// Kalau kosong, jadikan array kosong
+if (!$data) {
+    $data = [];
+}
+
 $terlaris = [];
 
-// Hitung total terjual per kopi
+// Hitung total terjual tiap kopi
 foreach ($data as $item) {
-    $nama = $item['nama'];
+    $nama = $item['kopi'];
     $qty = $item['qty'];
 
     if (!isset($terlaris[$nama])) {
@@ -13,9 +27,10 @@ foreach ($data as $item) {
     $terlaris[$nama] += $qty;
 }
 
-// Urutkan dari terbesar
+// Urutkan dari yang paling laku
 arsort($terlaris);
 ?>
+
 
 <!DOCTYPE html>
 <html>
