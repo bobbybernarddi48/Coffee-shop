@@ -50,7 +50,30 @@ td, th {
     color: white;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
+body {
+    background: linear-gradient(to right, #f3e5d8, #e6ccb2);
+    font-family: 'Segoe UI', sans-serif;
+}
 
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.btn {
+    border-radius: 8px;
+}
 
 
 

@@ -8,5 +8,11 @@ foreach($kopi as $k) if($k['id']==$_GET['id']) $item=$k;
 <input type="hidden" name="harga" value="<?= $item['harga'] ?>">
 <input name="nama" class="form-control mb-2" placeholder="Nama Pembeli" required>
 <textarea name="alamat" class="form-control mb-2" placeholder="Alamat" required></textarea>
+<label class="form-label">Pilihan Penyajian</label>
+<select name="tipe" class="form-control mb-2" required>
+    <option value="Dine In">Dine In (Minum di tempat)</option>
+    <option value="Take Away">Take Away (Bungkus)</option>
+</select>
+
 <button class="btn btn-success">Pesan</button>
 </form>

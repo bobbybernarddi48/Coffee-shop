@@ -22,10 +22,14 @@ $totalPendapatan = 0;
 $totalItem = 0;
 
 foreach ($data as $pesanan) {
-    $subtotal = $pesanan['harga'] * $pesanan['qty'];
+    $harga = isset($pesanan['harga']) ? $pesanan['harga'] : 0;
+    $qty   = isset($pesanan['qty']) ? $pesanan['qty'] : 1; // default 1 kalau tidak ada
+
+    $subtotal = $harga * $qty;
     $totalPendapatan += $subtotal;
-    $totalItem += $pesanan['qty'];
+    $totalItem += $qty;
 }
+
 ?>
 
 

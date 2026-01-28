@@ -30,3 +30,6 @@
 
 </body>
 </html>
+
+<th>Tipe</th>
+<td><?= $p['tipe'] ?></td>

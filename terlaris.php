@@ -18,14 +18,16 @@ $terlaris = [];
 
 // Hitung total terjual tiap kopi
 foreach ($data as $item) {
-    $nama = $item['kopi'];
-    $qty = $item['qty'];
+    $nama = isset($item['kopi']) ? $item['kopi'] : 'Tidak diketahui';
+    $qty  = isset($item['qty']) ? $item['qty'] : 1; // default 1 kalau tidak ada
 
     if (!isset($terlaris[$nama])) {
         $terlaris[$nama] = 0;
     }
     $terlaris[$nama] += $qty;
 }
+
+
 
 // Urutkan dari yang paling laku
 arsort($terlaris);
