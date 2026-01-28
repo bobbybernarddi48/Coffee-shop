@@ -75,5 +75,47 @@ body {
     border-radius: 8px;
 }
 
+/* CARD PRODUK */
+.product-card {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* GAMBAR PRODUK */
+.product-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* TOMBOL */
+.btn-dark {
+    background: linear-gradient(45deg, #4b2e2e, #6f4e37);
+    border: none;
+    font-weight: 600;
+}
+
+.btn-dark:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* JUDUL HALAMAN */
+.section-title {
+    font-weight: bold;
+    color: #4b2e2e;
+    margin-bottom: 25px;
+}
+
 
 
