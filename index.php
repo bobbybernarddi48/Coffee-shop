@@ -1,3 +1,17 @@
+
+<?php
+$kopi = json_decode(file_get_contents("data/kopi.json"), true);
+$pesanan = json_decode(file_get_contents("data/checkout.json"), true);
+
+$terlaris = [];
+foreach ($pesanan as $p) {
+    $nama = $p['kopi'];
+    if (!isset($terlaris[$nama])) $terlaris[$nama] = 0;
+    $terlaris[$nama]++;
+}
+arsort($terlaris);
+$bestSeller = key($terlaris); // kopi paling laku
+?>
 <?php $kopi = json_decode(file_get_contents("data/kopi.json"), true); ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +38,20 @@
 <div class="row">
 <?php foreach ($kopi as $k): ?>
 <div class="col-md-3">
-  <div class="card mb-3 shadow-sm">
+  <?php
+$kopi = json_decode(file_get_contents("data/kopi.json"), true);
+$pesanan = json_decode(file_get_contents("data/checkout.json"), true);
+
+$terlaris = [];
+foreach ($pesanan as $p) {
+    $nama = $p['kopi'];
+    if (!isset($terlaris[$nama])) $terlaris[$nama] = 0;
+    $terlaris[$nama]++;
+}
+arsort($terlaris);
+$bestSeller = key($terlaris); // kopi paling laku
+?>
+
     <img src="assets/img/<?= $k['gambar'] ?>" class="card-img-top" height="160">
     <div class="card-body">
       <h5><?= $k['nama'] ?></h5>
