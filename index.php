@@ -12,6 +12,8 @@
 <a href="tambah.php" class="btn btn-primary mb-3">+ Tambah Kopi</a>
 <a href="pesanan.php" class="btn btn-dark mb-3">📦 Lihat Pesanan</a>
 <a href="terlaris.php" class="btn btn-warning">🔥 Kopi Terlaris</a>
+<a href="laporan.php" class="btn btn-success">📊 Laporan</a>
+
 
 
 <div class="row">
